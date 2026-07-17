@@ -5,7 +5,7 @@ const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      todoTask: "Shruti ko msg krna hai (Samit's task)",
+      todoTask: "..... ko msg krna hai (Samit's task)",
       isCompleted: false
     }, {
       id: 2,
@@ -53,7 +53,9 @@ const TodoProvider = ({ children }) => {
 
   useEffect(() => {
     const stored = localStorage.getItem("todos");
-    setTodos(stored ? JSON.parse(stored) : []);
+    if (stored) {
+      setTodos(JSON.parse(stored));
+    }
   }, [])
 
   useEffect(() => {
