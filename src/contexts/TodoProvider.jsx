@@ -2,7 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { TodoContext } from './TodoContext'
 
 const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      todoTask: "Shruti ko msg krna hai (Samit's task)",
+      isCompleted: false
+    }, {
+      id: 2,
+      todoTask: "Neel - kya hi task du tujhe... tera sara task done",
+      isCompleted: true
+    }
+  ]);
 
   const createNewTodo = (todo) => {
     setTodos((prev) => ([...prev, {
