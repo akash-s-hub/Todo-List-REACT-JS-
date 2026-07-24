@@ -5,12 +5,8 @@ const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      todoTask: "..... ko msg krna hai (Samit's task)",
+      todoTask: "Demo Todo",
       isCompleted: false
-    }, {
-      id: 2,
-      todoTask: "Neel - kya hi task du tujhe... tera sara task done",
-      isCompleted: true
     }
   ]);
 
